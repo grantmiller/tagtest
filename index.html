@@ -15,7 +15,7 @@
 <script type="text/javascript">
   /* LP Mobile JS Configuration */
   var _LP_CFG_ = {
-    app_id : "59255004",
+    app_id : "88310755",
     log_level : 1,
     options : {
       events : {
@@ -26,9 +26,7 @@
       },
       extras : {
         "identifier" : "Grant Miller"
-      },
-      skill : "hotel-tonight",
-      triggerSelector : "#chat1"
+      }
     }
   }; 
 </script>
@@ -42,15 +40,13 @@
     <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-function setSkill()
+function startChat(acct, skill)
   {
-    LPMobile.setSkill('Abusers');
+    LPMobile.beginChat(acct, skill);
   }
 </script>
 
-      <button onclick="setSkill()">Become Abuser</button></br></br>
-      <button class="chat">chat now</button>
-      <a href="#" id="chat1" ><span class="chat-ico"></span>Live Chat</a>
+<button onclick="startChat('1771134', 'service-olam-mobile-english')">Start Chat Service Olam</button></br></br>
       
 <script type="text/javascript">
 function setSkillm()
