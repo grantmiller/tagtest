@@ -42,8 +42,8 @@ function setSkill()
 <script type="text/javascript">
 function conversion()
   {
-    LPMobile.reportEvent(LPMobile.LP_EVENT_CONVERSION, "99.99");
-    alert("sent a conversion event");
+    LPMobile.reportEvent("orderValue", "99.99");
+    alert("sent an orderValue conversion event");
   }
 </script>
 <button onclick="conversion()">Buy Stuff</button>
