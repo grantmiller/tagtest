@@ -40,8 +40,7 @@
     <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-  setTimeout('', 5000);
-  if (LPMobile) {
+  function chatButton (acct, skill) {
     if (LPMobile.getEnabled(acct, skill) == 1) {
       document.getElementById("chatButton").style.visibility="visible";
       LPMobile.setInvitationShown(acct, skill);
@@ -52,6 +51,9 @@
     }
   }
 </script>
+
+
+setTimeout(chatButton('1771134', 'service-olam-mobile-english'), 3000);
 
 <button id="chatButton" style="visibility: hidden" onclick="LPMobile.beginChat('1771134', 'service-olam-mobile-english')">Start Chat Service Olam</button></br></br>
       
