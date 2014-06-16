@@ -24,6 +24,14 @@
         onChatForegrounded : function() {alert('FOREgrounded!');},
         onChatStarted : function() {alert('chat started!');},
       },
+      onReady : function() {
+        chatButton('1771134', 'service-olam-mobile-english');
+        LPMobile.on("enabledChange",function(o) {
+          if(o.account == '1771134' && o.skill == 'service-olam-mobile-english') {
+            chatButton(o.account, o.skill);
+          };
+        };
+      },
       extras : {
         "identifier" : "Grant Miller"
       }
@@ -50,11 +58,6 @@
       LPMobile.reportEvent(acct+'-Mobile-Buttton', "0");
     }
   }
-  
-  function grant() {
-    chatButton('1771134', 'service-olam-mobile-english');
-  }
-  setTimeout(grant, 3000);
 </script>
 
 
