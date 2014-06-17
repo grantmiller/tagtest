@@ -8,6 +8,9 @@
     <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
   </head>
   <body>
+
+// sets the visibility of the mobile button based on availability
+// sets the state of the mobile button for reporting
 <script type="text/javascript">
   function chatButtonState (acct, skill) {
     if(document.getElementById("chatButton")) {
@@ -24,6 +27,10 @@
     };
   }
 </script>
+
+// configures the page to LP Mobile
+// uses the onReady fuction to trigger the button state
+// monitors changes in availablity & updates the button state. 
 <script type="text/javascript">
   /* LP Mobile JS Configuration */
   var _LP_CFG_ = {
@@ -34,7 +41,7 @@
         chatButtonState('1771134', 'service-olam-mobile-english');
         LPMobile.on("enabledChange",function(o) {
           if(o.account == '1771134' && o.skill == 'service-olam-mobile-english') {
-            chatButton(o.account, o.skill);
+            chatButtonState(o.account, o.skill);
           };
         };
       },
@@ -47,6 +54,7 @@
 <script src="/tagtest/js/tag.js"></script>
     <h1>Hello, world!</h1>
 
+    // Uses the begin chat function to direct the chat to the target account on click 
     <button id="chatButton" style="visibility: hidden" onclick="LPMobile.beginChat('1771134', 'service-olam-mobile-english')">Start Chat Service Olam</button></br></br>
       
     <button onclick="LPMobile.reportEvent('clickToCall', '1')">Click 2 Call</button></br></br>
