@@ -40,9 +40,7 @@
       onReady : function() {
         chatButtonState('1771134', 'service_olam-mobile-web-english');
         LPMobile.on("enabledChange",function(o) {
-          if(o.account == '1771134' && o.skill == 'service_olam-mobile-web-english') {
-            chatButtonState(o.account, o.skill);
-          }
+          chatButtonState(o.account, o.skill);
         });
       },
       extras : {
