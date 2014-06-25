@@ -28,14 +28,6 @@
   }
 </script>
 
-<script type="text/javascript">
-  function hideElems() {
-    var elems = document.getElementsByClassName("elem");
-  //  elems.forEach(function(elem) {
-      alert(elems);
-    }); 
-  }
-</script>
 <!-- configures the page to LP Mobile
     uses the onReady fuction to trigger the button state
     monitors changes in availablity & updates the button state. -->
@@ -52,7 +44,7 @@
           chatButtonState(o.account, o.skill);
         });
         LPMobile.on("windowShow", function() {
-          hideElems();
+          alert("Aria Hidden ;O");
         })
       },
       extras : {
