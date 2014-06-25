@@ -44,7 +44,10 @@
           chatButtonState(o.account, o.skill);
         });
         LPMobile.on("windowShow", function() {
-          alert("Aria Hidden ;O");
+          alert("Host Aria Hidden ;O");
+        });
+        LPMobile.on("windowHide", function() {
+          alert("Host Aria Show ;O");
         })
       },
       extras : {
