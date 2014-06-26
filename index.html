@@ -17,13 +17,15 @@
     if(document.getElementById(acct+"-"+skill+"-chatButton")) {
       if (LPMobile.getEnabled(acct, skill) == 1) {
         document.getElementById(acct+"-"+skill+"-chatButton").style.visibility="visible";
-        LPMobile.setInvitationShown(acct, skill);
+        LPMobile.setInvitationShown();
         LPMobile.reportEvent(acct+"-"+skill+'-Mobile-Buttton', "1");
       } else {
         document.getElementById(acct+"-"+skill+"-chatButton").style.visibility="hidden";
+        LPMobile.setInvitationNotShown();
         LPMobile.reportEvent(acct+"-"+skill+'-Mobile-Buttton', "0");
       };
     } else {
+        LPMobile.setInvitationNotAvailable();
         LPMobile.reportEvent(acct+"-"+skill+'-Mobile-Buttton', "-1");
     };
   }
